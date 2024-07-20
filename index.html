@@ -1,0 +1,78 @@
+Initial State: User is on the Home Page.
+State 1: User searches for a product.
+State 2: Search results are displayed.
+State 3: User selects a product.
+State 4: Product details page is displayed.
+State 5: User adds the product to the cart.
+State 6: Product is added to the cart.
+State 7: User views the cart.
+State 8: Cart details are displayed.
+State 9: User proceeds to checkout.
+State 10: Checkout page is displayed.
+State 11: User completes the payment and places the order.
+Final State: Order confirmation is displayed
+
+
+state Transition Daigram
+
+
+[Home Page]
+      |
+      V
+[Search for Product]
+      |
+      V
+[Display Search Results]
+      |
+      V
+[Select Product]
+      |
+      V
+[Display Product Details]
+      |
+      V
+[Add Product to Cart]
+      |
+      V
+[Product Added to Cart]
+      |
+      V
+[View Cart]
+      |
+      V
+[Display Cart Details]
+      |
+      V
+[Proceed to Checkout]
+      |
+      V
+[Display Checkout Page]
+      |
+      V
+[Complete Payment and Place Order]
+      |
+      V
+[Order Confirmation]
+
+
+
+
+
+
+
+stateDiagram
+    [*] --> HomePage
+    HomePage --> SearchProduct: Search for Product
+    SearchProduct --> DisplaySearchResults: Display Results
+    DisplaySearchResults --> SelectProduct: Select Product
+    SelectProduct --> DisplayProductDetails: Display Product Details
+    DisplayProductDetails --> AddProductToCart: Add Product to Cart
+    AddProductToCart --> ProductAddedToCart: Product Added
+    ProductAddedToCart --> ViewCart: View Cart
+    ViewCart --> DisplayCartDetails: Display Cart Details
+    DisplayCartDetails --> ProceedToCheckout: Proceed to Checkout
+    ProceedToCheckout --> DisplayCheckoutPage: Display Checkout Page
+    DisplayCheckoutPage --> CompletePayment: Complete Payment
+    CompletePayment --> OrderConfirmation: Order Confirmation
+    OrderConfirmation --> [*]
+
